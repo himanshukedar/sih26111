@@ -34,6 +34,28 @@ if (Platform.OS === 'web') {
         box-shadow: 0 10px 30px rgba(0,0,0,0.5) !important;
         position: relative !important;
         flex: unset !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        background: transparent;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #475569;
+      }
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #334155 transparent;
       }
     `;
     document.head.appendChild(style);
@@ -104,5 +126,15 @@ const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
     backgroundColor: '#0A0F1D'
+  },
+  webRoot: {
+    flex: 1,
+    width: '100%',
+    height: '100%'
+  },
+  mobileContainer: {
+    flex: 1,
+    width: '100%',
+    height: '100%'
   }
 });

@@ -24,7 +24,7 @@ export const HomeScreen: React.FC = () => {
   };
 
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
+    <ScrollView style={styles.container} contentContainerStyle={styles.content} showsVerticalScrollIndicator={true}>
       {/* Farmer Greeting Banner */}
       <View style={styles.farmerCard}>
         <View style={styles.farmerAvatar}>
