@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "silageguard-ai",
+    "slug": "silageguard-ai",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "package": "com.silageguard.ai",
+      "permissions": [
+        "android.permission.USB_PERMISSION",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "./withUSBHost.js",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow SilageGuard to access your camera to scan silage."
+        }
+      ]
+    ]
+  }
+}
